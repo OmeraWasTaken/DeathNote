@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17383131206E750800ABE6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383130206E750800ABE6CA /* AppDelegate.swift */; };
+		17383136206E750800ABE6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17383134206E750800ABE6CA /* Main.storyboard */; };
+		1738313B206E750800ABE6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1738313A206E750800ABE6CA /* Assets.xcassets */; };
+		1738313E206E750800ABE6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738313C206E750800ABE6CA /* LaunchScreen.storyboard */; };
+		1738314C206E79CB00ABE6CA /* ListOfDeath.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738314B206E79CB00ABE6CA /* ListOfDeath.storyboard */; };
+		1738314E206E79F500ABE6CA /* ListOfDeathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1738314D206E79F500ABE6CA /* ListOfDeathCell.xib */; };
+		17383150206E7BC300ABE6CA /* ListOfDeathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738314F206E7BC300ABE6CA /* ListOfDeathCell.swift */; };
+		17383152206E7C2A00ABE6CA /* ListOfDeathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383151206E7C2A00ABE6CA /* ListOfDeathViewController.swift */; };
+		17383156206E835C00ABE6CA /* AddDeath.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17383155206E835C00ABE6CA /* AddDeath.storyboard */; };
+		17383158206FC83600ABE6CA /* AddDeathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383157206FC83500ABE6CA /* AddDeathViewController.swift */; };
+		1738315A206FC99600ABE6CA /* ListOfDeathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383159206FC99600ABE6CA /* ListOfDeathViewModel.swift */; };
+		1738315C206FC9A700ABE6CA /* AddDeathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738315B206FC9A700ABE6CA /* AddDeathViewModel.swift */; };
+		1738315F206FEC9200ABE6CA /* MainBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738315E206FEC9200ABE6CA /* MainBootstrapper.swift */; };
+		173831612070FE5F00ABE6CA /* DeathDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831602070FE5F00ABE6CA /* DeathDto.swift */; };
+		173831632070FF1900ABE6CA /* AddDeathViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831622070FF1900ABE6CA /* AddDeathViewModelImpl.swift */; };
+		17383165207100C200ABE6CA /* DeathRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383164207100C200ABE6CA /* DeathRepository.swift */; };
+		17383167207108FD00ABE6CA /* Death.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383166207108FD00ABE6CA /* Death.swift */; };
+		173831692071090A00ABE6CA /* DeathList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831682071090A00ABE6CA /* DeathList.swift */; };
+		1738316B20711ABF00ABE6CA /* ListOfDeathViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738316A20711ABF00ABE6CA /* ListOfDeathViewModelImpl.swift */; };
+		1738316F20711C3A00ABE6CA /* DeathDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738316E20711C3A00ABE6CA /* DeathDetailViewModel.swift */; };
+		1738317120711DEB00ABE6CA /* DeathDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738317020711DEB00ABE6CA /* DeathDetailViewModelImpl.swift */; };
+		1738317320711E8500ABE6CA /* DeathDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738317220711E8500ABE6CA /* DeathDetailViewController.swift */; };
+		1738317520711EB700ABE6CA /* DeathDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738317420711EB700ABE6CA /* DeathDetail.storyboard */; };
+		173831772071245800ABE6CA /* DeathRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831762071245800ABE6CA /* DeathRepositoryImpl.swift */; };
+		1738317A2071269000ABE6CA /* DeathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831792071269000ABE6CA /* DeathData.swift */; };
+		B8DB1227D2A7DDEDA824EB13 /* Pods_DeathNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1738312D206E750800ABE6CA /* DeathNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeathNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17383130206E750800ABE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17383135206E750800ABE6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1738313A206E750800ABE6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1738313D206E750800ABE6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1738313F206E750800ABE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1738314B206E79CB00ABE6CA /* ListOfDeath.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfDeath.storyboard; sourceTree = "<group>"; };
+		1738314D206E79F500ABE6CA /* ListOfDeathCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfDeathCell.xib; sourceTree = "<group>"; };
+		1738314F206E7BC300ABE6CA /* ListOfDeathCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDeathCell.swift; sourceTree = "<group>"; };
+		17383151206E7C2A00ABE6CA /* ListOfDeathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDeathViewController.swift; sourceTree = "<group>"; };
+		17383155206E835C00ABE6CA /* AddDeath.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDeath.storyboard; sourceTree = "<group>"; };
+		17383157206FC83500ABE6CA /* AddDeathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeathViewController.swift; sourceTree = "<group>"; };
+		17383159206FC99600ABE6CA /* ListOfDeathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDeathViewModel.swift; sourceTree = "<group>"; };
+		1738315B206FC9A700ABE6CA /* AddDeathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeathViewModel.swift; sourceTree = "<group>"; };
+		1738315E206FEC9200ABE6CA /* MainBootstrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBootstrapper.swift; sourceTree = "<group>"; };
+		173831602070FE5F00ABE6CA /* DeathDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathDto.swift; sourceTree = "<group>"; };
+		173831622070FF1900ABE6CA /* AddDeathViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeathViewModelImpl.swift; sourceTree = "<group>"; };
+		17383164207100C200ABE6CA /* DeathRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathRepository.swift; sourceTree = "<group>"; };
+		17383166207108FD00ABE6CA /* Death.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death.swift; sourceTree = "<group>"; };
+		173831682071090A00ABE6CA /* DeathList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathList.swift; sourceTree = "<group>"; };
+		1738316A20711ABF00ABE6CA /* ListOfDeathViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDeathViewModelImpl.swift; sourceTree = "<group>"; };
+		1738316E20711C3A00ABE6CA /* DeathDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathDetailViewModel.swift; sourceTree = "<group>"; };
+		1738317020711DEB00ABE6CA /* DeathDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathDetailViewModelImpl.swift; sourceTree = "<group>"; };
+		1738317220711E8500ABE6CA /* DeathDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathDetailViewController.swift; sourceTree = "<group>"; };
+		1738317420711EB700ABE6CA /* DeathDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeathDetail.storyboard; sourceTree = "<group>"; };
+		173831762071245800ABE6CA /* DeathRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathRepositoryImpl.swift; sourceTree = "<group>"; };
+		173831792071269000ABE6CA /* DeathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathData.swift; sourceTree = "<group>"; };
+		51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.debug.xcconfig"; sourceTree = "<group>"; };
+		B67A752623730F2033EF20C6 /* Pods-DeathNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1738312A206E750800ABE6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8DB1227D2A7DDEDA824EB13 /* Pods_DeathNote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17383124206E750700ABE6CA = {
+			isa = PBXGroup;
+			children = (
+				1738312F206E750800ABE6CA /* DeathNote */,
+				1738312E206E750800ABE6CA /* Products */,
+				754CD70EED854EAB1B867720 /* Pods */,
+				59CC3EE0E185E4B82971CBC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1738312E206E750800ABE6CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1738312D206E750800ABE6CA /* DeathNote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1738312F206E750800ABE6CA /* DeathNote */ = {
+			isa = PBXGroup;
+			children = (
+				17383178207125FE00ABE6CA /* Realm */,
+				1738315D206FE8D300ABE6CA /* InjectionDependancy */,
+				17383147206E792700ABE6CA /* DeathDetail */,
+				17383146206E791200ABE6CA /* AddDeath */,
+				17383145206E78BE00ABE6CA /* ListOfDeath */,
+				1738314A206E796E00ABE6CA /* Domain */,
+				17383130206E750800ABE6CA /* AppDelegate.swift */,
+				17383134206E750800ABE6CA /* Main.storyboard */,
+				1738313A206E750800ABE6CA /* Assets.xcassets */,
+				1738313C206E750800ABE6CA /* LaunchScreen.storyboard */,
+				1738313F206E750800ABE6CA /* Info.plist */,
+			);
+			path = DeathNote;
+			sourceTree = "<group>";
+		};
+		17383145206E78BE00ABE6CA /* ListOfDeath */ = {
+			isa = PBXGroup;
+			children = (
+				17383149206E794600ABE6CA /* ViewModel */,
+				17383148206E793A00ABE6CA /* ViewController */,
+				1738314B206E79CB00ABE6CA /* ListOfDeath.storyboard */,
+				1738314D206E79F500ABE6CA /* ListOfDeathCell.xib */,
+			);
+			path = ListOfDeath;
+			sourceTree = "<group>";
+		};
+		17383146206E791200ABE6CA /* AddDeath */ = {
+			isa = PBXGroup;
+			children = (
+				17383154206E833400ABE6CA /* ViewModel */,
+				17383153206E832A00ABE6CA /* ViewController */,
+				17383155206E835C00ABE6CA /* AddDeath.storyboard */,
+			);
+			path = AddDeath;
+			sourceTree = "<group>";
+		};
+		17383147206E792700ABE6CA /* DeathDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1738316C20711BA100ABE6CA /* ViewModel */,
+				1738316D20711BAB00ABE6CA /* ViewController */,
+				1738317420711EB700ABE6CA /* DeathDetail.storyboard */,
+			);
+			path = DeathDetail;
+			sourceTree = "<group>";
+		};
+		17383148206E793A00ABE6CA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1738314F206E7BC300ABE6CA /* ListOfDeathCell.swift */,
+				17383151206E7C2A00ABE6CA /* ListOfDeathViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		17383149206E794600ABE6CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17383159206FC99600ABE6CA /* ListOfDeathViewModel.swift */,
+				1738316A20711ABF00ABE6CA /* ListOfDeathViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1738314A206E796E00ABE6CA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				17383164207100C200ABE6CA /* DeathRepository.swift */,
+				17383166207108FD00ABE6CA /* Death.swift */,
+				173831682071090A00ABE6CA /* DeathList.swift */,
+				173831762071245800ABE6CA /* DeathRepositoryImpl.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		17383153206E832A00ABE6CA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17383157206FC83500ABE6CA /* AddDeathViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		17383154206E833400ABE6CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1738315B206FC9A700ABE6CA /* AddDeathViewModel.swift */,
+				173831602070FE5F00ABE6CA /* DeathDto.swift */,
+				173831622070FF1900ABE6CA /* AddDeathViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1738315D206FE8D300ABE6CA /* InjectionDependancy */ = {
+			isa = PBXGroup;
+			children = (
+				1738315E206FEC9200ABE6CA /* MainBootstrapper.swift */,
+			);
+			path = InjectionDependancy;
+			sourceTree = "<group>";
+		};
+		1738316C20711BA100ABE6CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1738316E20711C3A00ABE6CA /* DeathDetailViewModel.swift */,
+				1738317020711DEB00ABE6CA /* DeathDetailViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1738316D20711BAB00ABE6CA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1738317220711E8500ABE6CA /* DeathDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		17383178207125FE00ABE6CA /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				173831792071269000ABE6CA /* DeathData.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		59CC3EE0E185E4B82971CBC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		754CD70EED854EAB1B867720 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */,
+				B67A752623730F2033EF20C6 /* Pods-DeathNote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1738312C206E750800ABE6CA /* DeathNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17383142206E750800ABE6CA /* Build configuration list for PBXNativeTarget "DeathNote" */;
+			buildPhases = (
+				6B5574014B2012BAC90FAE62 /* [CP] Check Pods Manifest.lock */,
+				17383129206E750800ABE6CA /* Sources */,
+				1738312A206E750800ABE6CA /* Frameworks */,
+				1738312B206E750800ABE6CA /* Resources */,
+				E25ACB8EE89E6939BE712E0D /* [CP] Embed Pods Frameworks */,
+				C480211305A09C131CFDCB6B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeathNote;
+			productName = DeathNote;
+			productReference = 1738312D206E750800ABE6CA /* DeathNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17383125206E750700ABE6CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Quentin Richard";
+				TargetAttributes = {
+					1738312C206E750800ABE6CA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 17383128206E750700ABE6CA /* Build configuration list for PBXProject "DeathNote" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17383124206E750700ABE6CA;
+			productRefGroup = 1738312E206E750800ABE6CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1738312C206E750800ABE6CA /* DeathNote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1738312B206E750800ABE6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1738314E206E79F500ABE6CA /* ListOfDeathCell.xib in Resources */,
+				1738314C206E79CB00ABE6CA /* ListOfDeath.storyboard in Resources */,
+				1738313E206E750800ABE6CA /* LaunchScreen.storyboard in Resources */,
+				1738317520711EB700ABE6CA /* DeathDetail.storyboard in Resources */,
+				17383156206E835C00ABE6CA /* AddDeath.storyboard in Resources */,
+				1738313B206E750800ABE6CA /* Assets.xcassets in Resources */,
+				17383136206E750800ABE6CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B5574014B2012BAC90FAE62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeathNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C480211305A09C131CFDCB6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E25ACB8EE89E6939BE712E0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17383129206E750800ABE6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17383152206E7C2A00ABE6CA /* ListOfDeathViewController.swift in Sources */,
+				173831772071245800ABE6CA /* DeathRepositoryImpl.swift in Sources */,
+				17383167207108FD00ABE6CA /* Death.swift in Sources */,
+				1738317320711E8500ABE6CA /* DeathDetailViewController.swift in Sources */,
+				17383131206E750800ABE6CA /* AppDelegate.swift in Sources */,
+				1738316B20711ABF00ABE6CA /* ListOfDeathViewModelImpl.swift in Sources */,
+				1738315F206FEC9200ABE6CA /* MainBootstrapper.swift in Sources */,
+				173831692071090A00ABE6CA /* DeathList.swift in Sources */,
+				17383158206FC83600ABE6CA /* AddDeathViewController.swift in Sources */,
+				173831612070FE5F00ABE6CA /* DeathDto.swift in Sources */,
+				1738316F20711C3A00ABE6CA /* DeathDetailViewModel.swift in Sources */,
+				173831632070FF1900ABE6CA /* AddDeathViewModelImpl.swift in Sources */,
+				1738315C206FC9A700ABE6CA /* AddDeathViewModel.swift in Sources */,
+				1738315A206FC99600ABE6CA /* ListOfDeathViewModel.swift in Sources */,
+				17383165207100C200ABE6CA /* DeathRepository.swift in Sources */,
+				1738317120711DEB00ABE6CA /* DeathDetailViewModelImpl.swift in Sources */,
+				1738317A2071269000ABE6CA /* DeathData.swift in Sources */,
+				17383150206E7BC300ABE6CA /* ListOfDeathCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17383134206E750800ABE6CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17383135206E750800ABE6CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1738313C206E750800ABE6CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1738313D206E750800ABE6CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17383140206E750800ABE6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17383141206E750800ABE6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17383143206E750800ABE6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVDJ9WEBGB;
+				INFOPLIST_FILE = DeathNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17383144206E750800ABE6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B67A752623730F2033EF20C6 /* Pods-DeathNote.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVDJ9WEBGB;
+				INFOPLIST_FILE = DeathNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17383128206E750700ABE6CA /* Build configuration list for PBXProject "DeathNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17383140206E750800ABE6CA /* Debug */,
+				17383141206E750800ABE6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17383142206E750800ABE6CA /* Build configuration list for PBXNativeTarget "DeathNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17383143206E750800ABE6CA /* Debug */,
+				17383144206E750800ABE6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17383125206E750700ABE6CA /* Project object */;
+}
