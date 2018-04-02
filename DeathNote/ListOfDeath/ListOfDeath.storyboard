@@ -25,16 +25,16 @@
             </objects>
             <point key="canvasLocation" x="-860" y="152"/>
         </scene>
-        <!--Table View Controller-->
+        <!--List Of Death View Controller-->
         <scene sceneID="qwP-bU-2CX">
             <objects>
-                <tableViewController id="oKM-kb-7nj" sceneMemberID="viewController">
+                <tableViewController id="oKM-kb-7nj" customClass="ListOfDeathViewController" customModule="DeathNote" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="53Q-HQ-NHM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="DXE-yg-yKG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DXE-yg-yKG">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXE-yg-yKG" id="SWa-pn-h5X">
@@ -49,12 +49,36 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="uUB-eE-hpO">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="9tf-2p-gIF"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="9tf-2p-gIF">
+                            <connections>
+                                <segue destination="Ia4-My-3E3" kind="show" id="naz-Wm-2pa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewListOfDeath" destination="53Q-HQ-NHM" id="40Q-tG-WTT"/>
+                        <segue destination="L9V-Yk-fTa" kind="show" identifier="toDeathDetail" id="OnE-v6-nNO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbl-rb-lbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26" y="152"/>
+        </scene>
+        <!--AddDeath-->
+        <scene sceneID="2am-yg-3DQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddDeath" id="Ia4-My-3E3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldS-gA-Veq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="151"/>
+        </scene>
+        <!--DeathDetail-->
+        <scene sceneID="xOi-YP-COZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DeathDetail" id="L9V-Yk-fTa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RN-oe-n0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="273"/>
         </scene>
     </scenes>
 </document>

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="5Ae-Iz-8j9" customClass="ListOfDeathCell" customModule="DeathNote" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deathCell" rowHeight="107" id="5Ae-Iz-8j9" customClass="ListOfDeathCell" customModule="DeathNote" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ae-Iz-8j9" id="zd9-xP-80f">
@@ -22,6 +22,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rde-IX-tL9">
                         <rect key="frame" x="16" y="11" width="90" height="85"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="85" id="89Z-Qx-zr4"/>
                             <constraint firstAttribute="width" constant="90" id="mu2-QV-uMA"/>
                         </constraints>
                     </imageView>
@@ -49,6 +50,11 @@
                     <constraint firstItem="rde-IX-tL9" firstAttribute="bottom" secondItem="zd9-xP-80f" secondAttribute="bottomMargin" id="xgB-hU-ot6"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="firstName" destination="d3B-1w-qUB" id="J3R-5g-arU"/>
+                <outlet property="lastName" destination="w67-qc-opi" id="2ug-eA-DCj"/>
+                <outlet property="profilePicture" destination="rde-IX-tL9" id="nFS-p0-hcX"/>
+            </connections>
             <point key="canvasLocation" x="97.5" y="-86.5"/>
         </tableViewCell>
     </objects>

@@ -7,7 +7,44 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ListOfDeathViewController: UITableViewController {
+    @IBOutlet weak var tableViewListOfDeath: UITableView!
+    let viewModel: ListOfDeathViewModel = MainBootstrapper.resolve(interface: ListOfDeathViewModel.self)
+    private let disposeBag = DisposeBag()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.dataSource = nil
+        tableView.register(UINib(nibName: "ListOfDeathCell", bundle: nil), forCellReuseIdentifier: "deathCell")
+        viewModel
+            .listOfDeathDto
+            .asObservable()
+            .bind(to: tableViewListOfDeath
+                .rx
+                .items(cellIdentifier: "deathCell",
+                       cellType: ListOfDeathCell.self)) { _, data, cell in
+                        cell.firstName.text = data.firstName
+                        cell.lastName.text = data.lastName
+                        cell.profilePicture.image = data.picture
+                        cell.idCell = data.id
+            }.disposed(by: disposeBag)
+        viewModel.getListOfDeath()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as? ListOfDeathCell
+        guard let id = selectedCell?.idCell else {
+            return
+        }
+        MainBootstrapper.shared.id = id
+        self.performSegue(withIdentifier: "toDeathDetail", sender: nil)
+    }
 }
+

@@ -9,8 +9,8 @@
 import Swinject
 
 public struct MainBootstrapper {
-    public static let shared = MainBootstrapper()
-
+    public static var shared = MainBootstrapper()
+    public var id = String()
     private let container: Container
 
     private init() {
@@ -40,4 +40,22 @@ public struct MainBootstrapper {
             DeathDetailViewModelImpl(deathRepository: self.container.resolve(DeathRepository.self)!)
         }
     }
+
+    public func bind<T>(interface: T.Type, to assembly: T) {
+        container.register(interface) { _ in assembly }
+    }
+    public func resolve<T>(interface: T.Type) -> T! {
+        return container.resolve(interface)
+    }
+
 }
+
+public extension MainBootstrapper {
+    static func bind<T>(interface: T.Type, to assembly: T) {
+        MainBootstrapper.shared.bind(interface: interface, to: assembly)
+    }
+    static func resolve<T>(interface: T.Type) -> T! {
+        return MainBootstrapper.shared.resolve(interface: interface)
+    }
+}
+

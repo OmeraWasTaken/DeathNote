@@ -10,13 +10,17 @@ import UIKit
 import RxSwift
 
 class AddDeathViewModelImpl: AddDeathViewModel {
-    var deathDto = PublishSubject<DeathDto>()
     private let deathRepository: DeathRepository
 
     init(deathRepository: DeathRepository) {
+        print(deathRepository)
         self.deathRepository = deathRepository
     }
 
-    func confirmKill() {
+    func confirmKill(death: DeathDto) {
+        let savingDeath = Death(id: death.id, firstName: death.firstName, lastName: death.lastName, date: death.date, reasonOfDeath: death.reasonOfDeath, picture: death.picture)
+        deathRepository.saveDeath(death: savingDeath)
+        deathRepository.createAnEvent(death: savingDeath)
     }
+
 }

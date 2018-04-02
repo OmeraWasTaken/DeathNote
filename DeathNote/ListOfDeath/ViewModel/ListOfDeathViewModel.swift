@@ -9,6 +9,6 @@
 import RxSwift
 
 protocol ListOfDeathViewModel {
-    var listOfDeathDto: PublishSubject<[DeathDto]>{get}
+    var listOfDeathDto: PublishSubject<[DeathDto]> {get}
     func getListOfDeath()
 }

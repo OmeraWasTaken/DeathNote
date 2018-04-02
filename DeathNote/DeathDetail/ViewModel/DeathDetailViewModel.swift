@@ -10,5 +10,5 @@ import RxSwift
 
 protocol DeathDetailViewModel {
     var deathDto: PublishSubject<DeathDto>{get}
-    func getDeathDetail()
+    func getDeathDetail(id: String)
 }

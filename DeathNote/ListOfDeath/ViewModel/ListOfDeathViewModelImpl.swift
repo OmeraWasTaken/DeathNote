@@ -17,5 +17,13 @@ class ListOfDeathViewModelImpl: ListOfDeathViewModel {
     }
 
     func getListOfDeath() {
+        let deathData = deathRepository.getAllDeath()
+        let allDeath = deathData.deathList
+        var listOfDeath = [DeathDto]()
+        for data in allDeath {
+            let death = DeathDto(id: data.id, firstName: data.firstName, lastName: data.lastName, date: data.date, reasonOfDeath: data.reasonOfDeath, picture: data.picture)
+            listOfDeath.append(death)
+        }
+        listOfDeathDto.onNext(listOfDeath)
     }
 }

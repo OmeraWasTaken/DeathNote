@@ -9,7 +9,6 @@
 import RxSwift
 
 protocol AddDeathViewModel {
-    var deathDto: PublishSubject<DeathDto> {get}
-    func confirmKill()
+    func confirmKill(death: DeathDto)
 }
 

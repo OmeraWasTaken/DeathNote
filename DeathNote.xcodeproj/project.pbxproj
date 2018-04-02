@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		17383131206E750800ABE6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17383130206E750800ABE6CA /* AppDelegate.swift */; };
-		17383136206E750800ABE6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17383134206E750800ABE6CA /* Main.storyboard */; };
 		1738313B206E750800ABE6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1738313A206E750800ABE6CA /* Assets.xcassets */; };
 		1738313E206E750800ABE6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738313C206E750800ABE6CA /* LaunchScreen.storyboard */; };
 		1738314C206E79CB00ABE6CA /* ListOfDeath.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738314B206E79CB00ABE6CA /* ListOfDeath.storyboard */; };
@@ -32,13 +31,13 @@
 		1738317520711EB700ABE6CA /* DeathDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738317420711EB700ABE6CA /* DeathDetail.storyboard */; };
 		173831772071245800ABE6CA /* DeathRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831762071245800ABE6CA /* DeathRepositoryImpl.swift */; };
 		1738317A2071269000ABE6CA /* DeathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831792071269000ABE6CA /* DeathData.swift */; };
+		1762748D207291F30070B73B /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762748C207291F30070B73B /* KeyboardExtension.swift */; };
 		B8DB1227D2A7DDEDA824EB13 /* Pods_DeathNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1738312D206E750800ABE6CA /* DeathNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeathNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17383130206E750800ABE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17383135206E750800ABE6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1738313A206E750800ABE6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1738313D206E750800ABE6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1738313F206E750800ABE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		1738317420711EB700ABE6CA /* DeathDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeathDetail.storyboard; sourceTree = "<group>"; };
 		173831762071245800ABE6CA /* DeathRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathRepositoryImpl.swift; sourceTree = "<group>"; };
 		173831792071269000ABE6CA /* DeathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathData.swift; sourceTree = "<group>"; };
+		1762748C207291F30070B73B /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.debug.xcconfig"; sourceTree = "<group>"; };
 		B67A752623730F2033EF20C6 /* Pods-DeathNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 		1738312F206E750800ABE6CA /* DeathNote */ = {
 			isa = PBXGroup;
 			children = (
+				1762748B207291C40070B73B /* Extension */,
 				17383178207125FE00ABE6CA /* Realm */,
 				1738315D206FE8D300ABE6CA /* InjectionDependancy */,
 				17383147206E792700ABE6CA /* DeathDetail */,
@@ -108,7 +109,6 @@
 				17383145206E78BE00ABE6CA /* ListOfDeath */,
 				1738314A206E796E00ABE6CA /* Domain */,
 				17383130206E750800ABE6CA /* AppDelegate.swift */,
-				17383134206E750800ABE6CA /* Main.storyboard */,
 				1738313A206E750800ABE6CA /* Assets.xcassets */,
 				1738313C206E750800ABE6CA /* LaunchScreen.storyboard */,
 				1738313F206E750800ABE6CA /* Info.plist */,
@@ -227,6 +227,14 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		1762748B207291C40070B73B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1762748C207291F30070B73B /* KeyboardExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		59CC3EE0E185E4B82971CBC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +320,6 @@
 				1738317520711EB700ABE6CA /* DeathDetail.storyboard in Resources */,
 				17383156206E835C00ABE6CA /* AddDeath.storyboard in Resources */,
 				1738313B206E750800ABE6CA /* Assets.xcassets in Resources */,
-				17383136206E750800ABE6CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +401,7 @@
 				1738315F206FEC9200ABE6CA /* MainBootstrapper.swift in Sources */,
 				173831692071090A00ABE6CA /* DeathList.swift in Sources */,
 				17383158206FC83600ABE6CA /* AddDeathViewController.swift in Sources */,
+				1762748D207291F30070B73B /* KeyboardExtension.swift in Sources */,
 				173831612070FE5F00ABE6CA /* DeathDto.swift in Sources */,
 				1738316F20711C3A00ABE6CA /* DeathDetailViewModel.swift in Sources */,
 				173831632070FF1900ABE6CA /* AddDeathViewModelImpl.swift in Sources */,
@@ -409,14 +417,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		17383134206E750800ABE6CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17383135206E750800ABE6CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1738313C206E750800ABE6CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -547,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -563,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
