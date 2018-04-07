@@ -13,7 +13,6 @@ class AddDeathViewModelImpl: AddDeathViewModel {
     private let deathRepository: DeathRepository
 
     init(deathRepository: DeathRepository) {
-        print(deathRepository)
         self.deathRepository = deathRepository
     }
 

@@ -42,7 +42,7 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
     func photoLibraryPicker() {
         let alert = UIAlertController(title: "Select your way", message: NSLocalizedString("I need a face so please select a way of giving me the face", comment: ""),
                                       preferredStyle: .alert)
-        alert.show(self, sender: Any?.self)
+        alert.show(self, sender: self)
         let libraryAction = UIAlertAction(title: NSLocalizedString("Library", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 let imagePicker = UIImagePickerController()

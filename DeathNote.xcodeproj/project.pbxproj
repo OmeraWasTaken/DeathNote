@@ -103,7 +103,7 @@
 			children = (
 				1762748B207291C40070B73B /* Extension */,
 				17383178207125FE00ABE6CA /* Realm */,
-				1738315D206FE8D300ABE6CA /* InjectionDependancy */,
+				1738315D206FE8D300ABE6CA /* InjectionDependency */,
 				17383147206E792700ABE6CA /* DeathDetail */,
 				17383146206E791200ABE6CA /* AddDeath */,
 				17383145206E78BE00ABE6CA /* ListOfDeath */,
@@ -194,12 +194,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1738315D206FE8D300ABE6CA /* InjectionDependancy */ = {
+		1738315D206FE8D300ABE6CA /* InjectionDependency */ = {
 			isa = PBXGroup;
 			children = (
 				1738315E206FEC9200ABE6CA /* MainBootstrapper.swift */,
 			);
-			path = InjectionDependancy;
+			path = InjectionDependency;
 			sourceTree = "<group>";
 		};
 		1738316C20711BA100ABE6CA /* ViewModel */ = {
