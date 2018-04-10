@@ -28,35 +28,38 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
     @objc func didTap(tapGestureRecognizer: UITapGestureRecognizer) {
         let photos = PHPhotoLibrary.authorizationStatus()
         if photos == .notDetermined {
-            PHPhotoLibrary.requestAuthorization( {status in
-                if (status == .authorized) {
+            PHPhotoLibrary.requestAuthorization({ status in
+                if status == .authorized {
                     self.photoLibraryPicker()
                 }
             })
-        }
-        else if photos == .authorized {
+        } else if photos == .authorized {
             photoLibraryPicker()
         }
     }
 
     func photoLibraryPicker() {
-        let alert = UIAlertController(title: "Select your way", message: NSLocalizedString("I need a face so please select a way of giving me the face", comment: ""),
+        // Todo: add the Localizable.string file
+        let alert = UIAlertController(title: "Select your way",
+                                      message: NSLocalizedString("I need a face so please select a way of giving me the face", comment: ""),
                                       preferredStyle: .alert)
         alert.show(self, sender: self)
-        let libraryAction = UIAlertAction(title: NSLocalizedString("Library", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
+        let libraryAction = UIAlertAction(title: NSLocalizedString("Library", comment: ""),
+                                          style: UIAlertActionStyle.default) { _ in
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
-                imagePicker.sourceType = .photoLibrary;
+                imagePicker.sourceType = .photoLibrary
                 imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
             }
         }
-        let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
+        let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: ""),
+                                         style: UIAlertActionStyle.default) { _ in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
-                imagePicker.sourceType = .camera;
+                imagePicker.sourceType = .camera
                 imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
             }
@@ -67,7 +70,8 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
         self.present(alert, animated: true, completion: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String: Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             profilePicture.image = pickedImage
         }
@@ -76,11 +80,11 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
 
     func confrirmKill() {
         let id = UUID().uuidString
-        if (firstNameLabel.text == "" && lastNameLabel.text == "") {
+        if firstNameLabel.text == "" && lastNameLabel.text == "" {
             errorAlert(errorMessage: "I need the first name and the last name of the target to kill someone")
             return
         }
-        if (deathDateLabel.text == "") {
+        if deathDateLabel.text == "" {
             let date = Date()
             let calendar = Calendar.current
             _ = calendar.component(.hour, from: date)
@@ -90,14 +94,16 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
             dateFormatter.dateFormat = "dd-MM-yyyy-HH-mm"
             deathDateLabel.text = dateFormatter.string(from: deathDate!)
         }
-        if (reasonLabel.text == "") {
+        if reasonLabel.text == "" {
             reasonLabel.text = "Hearth Attack"
         }
-        let death = DeathDto(id: id, firstName: firstNameLabel.text!, lastName: lastNameLabel.text!, date: deathDateLabel.text!, reasonOfDeath: reasonLabel.text!, picture: profilePicture.image!)
+        let death = DeathDto(id: id, firstName: firstNameLabel.text!, lastName: lastNameLabel.text!,
+                             date: deathDateLabel.text!, reasonOfDeath: reasonLabel.text!,
+                             picture: profilePicture.image!)
         viewModel.confirmKill(death: death)
     }
 
-    func errorAlert(errorMessage: String){
+    func errorAlert(errorMessage: String) {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         alert.show(self, sender: Any?.self)
         let okAction = UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: UIAlertActionStyle.cancel)
@@ -105,35 +111,36 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
         self.present(alert, animated: true, completion: nil)
     }
 
-
     @IBAction func killAction(_ sender: Any) {
         confrirmKill()
         self.performSegue(withIdentifier: "toHome", sender: nil)
     }
 
     @IBAction func dateAction(_ sender: Any) {
-        let datePickerView:UIDatePicker = UIDatePicker()
+        let datePickerView: UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.dateAndTime
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action:#selector(self.doneDatePickerPressed))
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done,
+                                         target: self, action: #selector(self.doneDatePickerPressed))
         toolBar.setItems([space, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         toolBar.sizeToFit()
         deathDateLabel.inputView = datePickerView
         deathDateLabel.inputAccessoryView = toolBar
-        datePickerView.addTarget(self, action: #selector(self.datePickerFromValueChanged), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self, action: #selector(self.datePickerFromValueChanged),
+                                 for: UIControlEvents.valueChanged)
     }
 
-    @objc func datePickerFromValueChanged(sender:UIDatePicker) {
+    @objc func datePickerFromValueChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy-HH-mm"
         deathDateLabel.text = dateFormatter.string(from: sender.date)
     }
 
-    @objc func doneDatePickerPressed(){
-        self.view.endEditing(true)
+    @objc func doneDatePickerPressed() {
+        view.endEditing(true)
     }
 }

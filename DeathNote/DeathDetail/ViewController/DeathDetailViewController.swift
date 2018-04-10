@@ -32,8 +32,6 @@ class DeathDetailViewController: UIViewController {
                     self.reasonOfDeath.text = data.reasonOfDeath
                 }, onCompleted: {})
                 .disposed(by: disposeBag)
-
-
         viewModel.getDeathDetail(id: MainBootstrapper.shared.id)
     }
 }

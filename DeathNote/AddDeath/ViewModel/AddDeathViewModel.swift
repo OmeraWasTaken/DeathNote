@@ -11,4 +11,3 @@ import RxSwift
 protocol AddDeathViewModel {
     func confirmKill(death: DeathDto)
 }
-

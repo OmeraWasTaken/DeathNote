@@ -19,24 +19,24 @@ public struct MainBootstrapper {
     }
 
     func registerContainer() {
-    self.registerRepositories()
-    self.registerViewModels()
+    registerRepositories()
+    registerViewModels()
     }
 
     private func registerRepositories() {
-        self.container.register(DeathRepository.self) { _ in
+        container.register(DeathRepository.self) { _ in
             DeathRepositoryImpl()
         }
     }
 
     private func registerViewModels() {
-        self.container.register(AddDeathViewModel.self) { _ in
+        container.register(AddDeathViewModel.self) { _ in
             AddDeathViewModelImpl(deathRepository: self.container.resolve(DeathRepository.self)!)
         }
-        self.container.register(ListOfDeathViewModel.self) { _ in
+        container.register(ListOfDeathViewModel.self) { _ in
             ListOfDeathViewModelImpl(deathRepository: self.container.resolve(DeathRepository.self)!)
         }
-        self.container.register(DeathDetailViewModel.self) { _ in
+        container.register(DeathDetailViewModel.self) { _ in
             DeathDetailViewModelImpl(deathRepository: self.container.resolve(DeathRepository.self)!)
         }
     }
@@ -58,4 +58,3 @@ public extension MainBootstrapper {
         return MainBootstrapper.shared.resolve(interface: interface)
     }
 }
-

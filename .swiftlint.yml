@@ -1,0 +1,8 @@
+disabled_rules:
+  - comment
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+line_length:
+  warning: 120
+  ignores_function_declarations: true
+  ignores_comments: true

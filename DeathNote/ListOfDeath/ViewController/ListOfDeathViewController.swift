@@ -47,4 +47,3 @@ class ListOfDeathViewController: UITableViewController {
         self.performSegue(withIdentifier: "toDeathDetail", sender: nil)
     }
 }
-

@@ -18,7 +18,9 @@ class DeathDetailViewModelImpl: DeathDetailViewModel {
 
     func getDeathDetail(id: String) {
         let death = deathRepository.getSelectedDeath(id: id)
-        let deathInfo = DeathDto(id: death.id, firstName: death.firstName, lastName: death.lastName, date: death.date, reasonOfDeath: death.reasonOfDeath, picture: death.picture)
+        let deathInfo = DeathDto(id: death.id, firstName: death.firstName,
+                                 lastName: death.lastName, date: death.date,
+                                 reasonOfDeath: death.reasonOfDeath, picture: death.picture)
         deathDto.onNext(deathInfo)
     }
 }

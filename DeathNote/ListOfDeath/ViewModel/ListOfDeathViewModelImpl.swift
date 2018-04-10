@@ -12,7 +12,7 @@ class ListOfDeathViewModelImpl: ListOfDeathViewModel {
     var listOfDeathDto = PublishSubject<[DeathDto]>()
     var deathRepository: DeathRepository
 
-    init(deathRepository: DeathRepository){
+    init(deathRepository: DeathRepository) {
         self.deathRepository = deathRepository
     }
 
@@ -21,7 +21,9 @@ class ListOfDeathViewModelImpl: ListOfDeathViewModel {
         let allDeath = deathData.deathList
         var listOfDeath = [DeathDto]()
         for data in allDeath {
-            let death = DeathDto(id: data.id, firstName: data.firstName, lastName: data.lastName, date: data.date, reasonOfDeath: data.reasonOfDeath, picture: data.picture)
+            let death = DeathDto(id: data.id, firstName: data.firstName,
+                                 lastName: data.lastName, date: data.date,
+                                 reasonOfDeath: data.reasonOfDeath, picture: data.picture)
             listOfDeath.append(death)
         }
         listOfDeathDto.onNext(listOfDeath)

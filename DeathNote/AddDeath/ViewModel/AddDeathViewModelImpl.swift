@@ -17,7 +17,9 @@ class AddDeathViewModelImpl: AddDeathViewModel {
     }
 
     func confirmKill(death: DeathDto) {
-        let savingDeath = Death(id: death.id, firstName: death.firstName, lastName: death.lastName, date: death.date, reasonOfDeath: death.reasonOfDeath, picture: death.picture)
+        let savingDeath = Death(id: death.id, firstName: death.firstName,
+                                lastName: death.lastName, date: death.date,
+                                reasonOfDeath: death.reasonOfDeath, picture: death.picture)
         deathRepository.saveDeath(death: savingDeath)
         deathRepository.createAnEvent(death: savingDeath)
     }

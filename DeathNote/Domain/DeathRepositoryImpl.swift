@@ -12,30 +12,36 @@ import EventKit
 
 class DeathRepositoryImpl: DeathRepository {
     var id = String()
-    let realm = try! Realm()
+    let realm = try? Realm()
 
     func getSelectedDeath(id: String) -> Death {
-        let data = realm.object(ofType: DeathData.self, forPrimaryKey: id) ?? DeathData()
+        let data = realm?.object(ofType: DeathData.self, forPrimaryKey: id) ?? DeathData()
         let image = UIImage(data: data.image) ?? UIImage()
-        let death = Death(id: data.id, firstName: data.firstName, lastName: data.lastName, date: data.date, reasonOfDeath: data.reasonOfDeath, picture: image)
+        let death = Death(id: data.id, firstName: data.firstName,
+                          lastName: data.lastName, date: data.date,
+                          reasonOfDeath: data.reasonOfDeath, picture: image)
         return death
     }
 
     func getAllDeath() -> DeathList {
-        let deathList = realm.objects(DeathData.self)
         var deaths = [Death]()
+        guard let deathList = realm?.objects(DeathData.self) else {
+            return DeathList(deathList: deaths)
+        }
         for data in deathList {
             guard let image = UIImage(data: data.image) else {
                 return DeathList(deathList: deaths)
             }
-            let death = Death(id: data.id, firstName: data.firstName, lastName: data.lastName, date: data.date, reasonOfDeath: data.reasonOfDeath, picture: image)
+            let death = Death(id: data.id, firstName: data.firstName,
+                              lastName: data.lastName, date: data.date,
+                              reasonOfDeath: data.reasonOfDeath, picture: image)
             deaths.append(death)
         }
         return DeathList(deathList: deaths)
     }
 
     func saveDeath(death: Death) {
-        try! self.realm.write {
+        try? realm?.write {
             let deathData = DeathData()
             deathData.id = death.id
             deathData.firstName = death.firstName
@@ -46,17 +52,17 @@ class DeathRepositoryImpl: DeathRepository {
                 return
             }
             deathData.image = dataImage
-            realm.add(deathData)
+            realm?.add(deathData)
         }
     }
 
     func createAnEvent(death: Death) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy-HH-mm"
-        let eventStore : EKEventStore = EKEventStore()
+        let eventStore: EKEventStore = EKEventStore()
         eventStore.requestAccess(to: .event) { (granted, error) in
             if (granted) && (error == nil) {
-                let event:EKEvent = EKEvent(eventStore: eventStore)
+                let event: EKEvent = EKEvent(eventStore: eventStore)
                 event.title = "\(death.lastName) \(death.firstName) is dead"
                 event.startDate = dateFormatter.date(from: death.date)
                 event.endDate = dateFormatter.date(from: death.date)
@@ -70,8 +76,7 @@ class DeathRepositoryImpl: DeathRepository {
                     print("failed to save event with error : \(error)")
                 }
                 print("Saved Event")
-            }
-            else{
+            } else {
                 print("failed to save event with error : \(error) or access not granted")
             }
         }
