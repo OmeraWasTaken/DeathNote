@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  DeathNote
+
+  Created by Quentin Richard on 12/04/2018.
+  Copyright © 2018 Quentin Richard. All rights reserved.
+*/
+
+
+// Add Death 
+"CameraMessage" = "I need a face so please select a way of giving me the face";
+"Library" = "Library";
+"Camera" = "Camera";
+"ErrorCamera" = "Sadly there is no camera on this device :'(";
+"TitleCameraAlert" = "Select your way";

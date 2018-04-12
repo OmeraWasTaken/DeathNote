@@ -31,6 +31,7 @@
 		1738317520711EB700ABE6CA /* DeathDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1738317420711EB700ABE6CA /* DeathDetail.storyboard */; };
 		173831772071245800ABE6CA /* DeathRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831762071245800ABE6CA /* DeathRepositoryImpl.swift */; };
 		1738317A2071269000ABE6CA /* DeathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831792071269000ABE6CA /* DeathData.swift */; };
+		175E2CEE207FB10F00D3D472 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175E2CED207FB10F00D3D472 /* Localizable.strings */; };
 		1762748D207291F30070B73B /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762748C207291F30070B73B /* KeyboardExtension.swift */; };
 		B8DB1227D2A7DDEDA824EB13 /* Pods_DeathNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		1738317420711EB700ABE6CA /* DeathDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeathDetail.storyboard; sourceTree = "<group>"; };
 		173831762071245800ABE6CA /* DeathRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathRepositoryImpl.swift; sourceTree = "<group>"; };
 		173831792071269000ABE6CA /* DeathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathData.swift; sourceTree = "<group>"; };
+		175E2CED207FB10F00D3D472 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1762748C207291F30070B73B /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				1738313A206E750800ABE6CA /* Assets.xcassets */,
 				1738313C206E750800ABE6CA /* LaunchScreen.storyboard */,
 				1738313F206E750800ABE6CA /* Info.plist */,
+				175E2CED207FB10F00D3D472 /* Localizable.strings */,
 			);
 			path = DeathNote;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				1738314E206E79F500ABE6CA /* ListOfDeathCell.xib in Resources */,
 				1738314C206E79CB00ABE6CA /* ListOfDeath.storyboard in Resources */,
 				1738313E206E750800ABE6CA /* LaunchScreen.storyboard in Resources */,
+				175E2CEE207FB10F00D3D472 /* Localizable.strings in Resources */,
 				1738317520711EB700ABE6CA /* DeathDetail.storyboard in Resources */,
 				17383156206E835C00ABE6CA /* AddDeath.storyboard in Resources */,
 				1738313B206E750800ABE6CA /* Assets.xcassets in Resources */,

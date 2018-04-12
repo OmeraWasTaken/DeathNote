@@ -40,8 +40,8 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
 
     func photoLibraryPicker() {
         // Todo: add the Localizable.string file
-        let alert = UIAlertController(title: "Select your way",
-                                      message: NSLocalizedString("I need a face so please select a way of giving me the face", comment: ""),
+        let alert = UIAlertController(title: NSLocalizedString("TitleCameraAlert", comment: ""),
+                                      message: NSLocalizedString("CameraMessage", comment: ""),
                                       preferredStyle: .alert)
         alert.show(self, sender: self)
         let libraryAction = UIAlertAction(title: NSLocalizedString("Library", comment: ""),
@@ -63,7 +63,7 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
                 imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
             }
-            self.errorAlert(errorMessage: "Sadly there is no camera on this device :'(")
+            self.errorAlert(errorMessage: NSLocalizedString("ErrorCamera", comment: ""))
         }
         alert.addAction(libraryAction)
         alert.addAction(cameraAction)
