@@ -29,7 +29,7 @@ class ListOfDeathViewController: UITableViewController {
                         cell.firstName.text = data.firstName
                         cell.lastName.text = data.lastName
                         cell.profilePicture.image = data.picture
-                        cell.idCell = data.id
+                        cell.idCell = data.deathId
             }.disposed(by: disposeBag)
         viewModel.getListOfDeath()
     }
@@ -40,10 +40,10 @@ class ListOfDeathViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as? ListOfDeathCell
-        guard let id = selectedCell?.idCell else {
+        guard let deathId = selectedCell?.idCell else {
             return
         }
-        MainBootstrapper.shared.id = id
+        MainBootstrapper.shared.deathId = deathId
         self.performSegue(withIdentifier: "toDeathDetail", sender: nil)
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 struct Death {
-    let id: String
+    let deathId: String
     let firstName: String
     let lastName: String
     let date: String

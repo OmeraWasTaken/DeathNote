@@ -11,13 +11,13 @@ import RealmSwift
 import EventKit
 
 class DeathRepositoryImpl: DeathRepository {
-    var id = String()
+    var deathId = String()
     let realm = try? Realm()
 
-    func getSelectedDeath(id: String) -> Death {
-        let data = realm?.object(ofType: DeathData.self, forPrimaryKey: id) ?? DeathData()
+    func getSelectedDeath(deathId: String) -> Death {
+        let data = realm?.object(ofType: DeathData.self, forPrimaryKey: deathId) ?? DeathData()
         let image = UIImage(data: data.image) ?? UIImage()
-        let death = Death(id: data.id, firstName: data.firstName,
+        let death = Death(deathId: data.deathId, firstName: data.firstName,
                           lastName: data.lastName, date: data.date,
                           reasonOfDeath: data.reasonOfDeath, picture: image)
         return death
@@ -32,7 +32,7 @@ class DeathRepositoryImpl: DeathRepository {
             guard let image = UIImage(data: data.image) else {
                 return DeathList(deathList: deaths)
             }
-            let death = Death(id: data.id, firstName: data.firstName,
+            let death = Death(deathId: data.deathId, firstName: data.firstName,
                               lastName: data.lastName, date: data.date,
                               reasonOfDeath: data.reasonOfDeath, picture: image)
             deaths.append(death)
@@ -43,7 +43,7 @@ class DeathRepositoryImpl: DeathRepository {
     func saveDeath(death: Death) {
         try? realm?.write {
             let deathData = DeathData()
-            deathData.id = death.id
+            deathData.deathId = death.deathId
             deathData.firstName = death.firstName
             deathData.lastName = death.lastName
             deathData.date = death.date

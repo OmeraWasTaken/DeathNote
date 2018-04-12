@@ -10,7 +10,7 @@ import Swinject
 
 public struct MainBootstrapper {
     public static var shared = MainBootstrapper()
-    public var id = String()
+    public var deathId = String()
     private let container: Container
 
     private init() {

@@ -11,6 +11,6 @@ import Foundation
 protocol DeathRepository {
     func getAllDeath() -> DeathList
     func saveDeath(death: Death)
-    func getSelectedDeath(id: String) -> Death
+    func getSelectedDeath(deathId: String) -> Death
     func createAnEvent(death: Death)
 }

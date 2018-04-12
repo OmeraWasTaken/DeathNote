@@ -16,7 +16,7 @@ class DeathDetailViewController: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var reasonOfDeath: UITextView!
     let viewModel: DeathDetailViewModel = MainBootstrapper.resolve(interface: DeathDetailViewModel.self)
-    let id = String()
+    let deathId = String()
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -32,6 +32,6 @@ class DeathDetailViewController: UIViewController {
                     self.reasonOfDeath.text = data.reasonOfDeath
                 }, onCompleted: {})
                 .disposed(by: disposeBag)
-        viewModel.getDeathDetail(id: MainBootstrapper.shared.id)
+        viewModel.getDeathDetail(deathId: MainBootstrapper.shared.deathId)
     }
 }

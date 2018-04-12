@@ -79,7 +79,7 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     func confrirmKill() {
-        let id = UUID().uuidString
+        let deathId = UUID().uuidString
         if firstNameLabel.text == "" && lastNameLabel.text == "" {
             errorAlert(errorMessage: "I need the first name and the last name of the target to kill someone")
             return
@@ -97,7 +97,7 @@ class AddDeathViewController: UIViewController, UIImagePickerControllerDelegate,
         if reasonLabel.text == "" {
             reasonLabel.text = "Hearth Attack"
         }
-        let death = DeathDto(id: id, firstName: firstNameLabel.text!, lastName: lastNameLabel.text!,
+        let death = DeathDto(deathId: deathId, firstName: firstNameLabel.text!, lastName: lastNameLabel.text!,
                              date: deathDateLabel.text!, reasonOfDeath: reasonLabel.text!,
                              picture: profilePicture.image!)
         viewModel.confirmKill(death: death)

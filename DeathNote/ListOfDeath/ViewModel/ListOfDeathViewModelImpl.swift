@@ -21,7 +21,7 @@ class ListOfDeathViewModelImpl: ListOfDeathViewModel {
         let allDeath = deathData.deathList
         var listOfDeath = [DeathDto]()
         for data in allDeath {
-            let death = DeathDto(id: data.id, firstName: data.firstName,
+            let death = DeathDto(deathId: data.deathId, firstName: data.firstName,
                                  lastName: data.lastName, date: data.date,
                                  reasonOfDeath: data.reasonOfDeath, picture: data.picture)
             listOfDeath.append(death)
