@@ -1,5 +1,7 @@
 # Death Note
 
+https://circleci.com/gh/OmeraWasTaken/DeathNote.png?circle-token=e4231f4bba99301a49ec0a808c8e663c91090e3a
+
 Project using __MVVM__ patern with __Rxswift__ and __DI__.
 
 The goal of this project it's to add a name in a book like in the anime `DeathNote`.
