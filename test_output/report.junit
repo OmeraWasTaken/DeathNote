@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='DeathNoteTests.xctest' tests='1' failures='0'>
+  <testsuite name='DeathNoteTests.ListOfDeathTest' tests='1' failures='0'>
+    <testcase classname='DeathNoteTests.ListOfDeathTest' name='testListOfDeathGetListOfDeath' time='0.003'/>
+  </testsuite>
+</testsuites>
