@@ -33,8 +33,20 @@
 		1738317A2071269000ABE6CA /* DeathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173831792071269000ABE6CA /* DeathData.swift */; };
 		175E2CEE207FB10F00D3D472 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175E2CED207FB10F00D3D472 /* Localizable.strings */; };
 		1762748D207291F30070B73B /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762748C207291F30070B73B /* KeyboardExtension.swift */; };
+		17BFE8B52094ECCC00BEBBBB /* ListOfDeathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFE8B42094ECCC00BEBBBB /* ListOfDeathTest.swift */; };
+		2CB6EC0E5F6B9859051B85FF /* Pods_DeathNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB80EEA91B951E0BDE7914 /* Pods_DeathNoteTests.framework */; };
 		B8DB1227D2A7DDEDA824EB13 /* Pods_DeathNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17BFE8B72094ECCC00BEBBBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17383125206E750700ABE6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1738312C206E750800ABE6CA;
+			remoteInfo = DeathNote;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1738312D206E750800ABE6CA /* DeathNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeathNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +77,15 @@
 		173831792071269000ABE6CA /* DeathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathData.swift; sourceTree = "<group>"; };
 		175E2CED207FB10F00D3D472 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1762748C207291F30070B73B /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		17BFE8B22094ECCC00BEBBBB /* DeathNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeathNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BFE8B42094ECCC00BEBBBB /* ListOfDeathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDeathTest.swift; sourceTree = "<group>"; };
+		17BFE8B62094ECCC00BEBBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43FB80EEA91B951E0BDE7914 /* Pods_DeathNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.debug.xcconfig"; sourceTree = "<group>"; };
+		B2893572B981A9BA79467BC9 /* Pods-DeathNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNoteTests/Pods-DeathNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B67A752623730F2033EF20C6 /* Pods-DeathNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.release.xcconfig"; sourceTree = "<group>"; };
+		C8DE9D8881D18AA65966CE86 /* Pods-DeathNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNoteTests/Pods-DeathNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BFE8AF2094ECCC00BEBBBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB6EC0E5F6B9859051B85FF /* Pods_DeathNoteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1738312F206E750800ABE6CA /* DeathNote */,
+				17BFE8B32094ECCC00BEBBBB /* DeathNoteTests */,
 				1738312E206E750800ABE6CA /* Products */,
 				754CD70EED854EAB1B867720 /* Pods */,
 				59CC3EE0E185E4B82971CBC1 /* Frameworks */,
@@ -96,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				1738312D206E750800ABE6CA /* DeathNote.app */,
+				17BFE8B22094ECCC00BEBBBB /* DeathNoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,10 +266,36 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		17BFE8B32094ECCC00BEBBBB /* DeathNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				17BFE8BC2094EF3200BEBBBB /* ListOfDeath */,
+				17BFE8B62094ECCC00BEBBBB /* Info.plist */,
+			);
+			path = DeathNoteTests;
+			sourceTree = "<group>";
+		};
+		17BFE8BC2094EF3200BEBBBB /* ListOfDeath */ = {
+			isa = PBXGroup;
+			children = (
+				17BFE8BD2094EF3C00BEBBBB /* ViewModel */,
+			);
+			path = ListOfDeath;
+			sourceTree = "<group>";
+		};
+		17BFE8BD2094EF3C00BEBBBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17BFE8B42094ECCC00BEBBBB /* ListOfDeathTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		59CC3EE0E185E4B82971CBC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */,
+				43FB80EEA91B951E0BDE7914 /* Pods_DeathNoteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,6 +305,8 @@
 			children = (
 				91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */,
 				B67A752623730F2033EF20C6 /* Pods-DeathNote.release.xcconfig */,
+				B2893572B981A9BA79467BC9 /* Pods-DeathNoteTests.debug.xcconfig */,
+				C8DE9D8881D18AA65966CE86 /* Pods-DeathNoteTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -279,19 +335,45 @@
 			productReference = 1738312D206E750800ABE6CA /* DeathNote.app */;
 			productType = "com.apple.product-type.application";
 		};
+		17BFE8B12094ECCC00BEBBBB /* DeathNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17BFE8BB2094ECCC00BEBBBB /* Build configuration list for PBXNativeTarget "DeathNoteTests" */;
+			buildPhases = (
+				72807EE9C5E33D11D6EDA395 /* [CP] Check Pods Manifest.lock */,
+				17BFE8AE2094ECCC00BEBBBB /* Sources */,
+				17BFE8AF2094ECCC00BEBBBB /* Frameworks */,
+				17BFE8B02094ECCC00BEBBBB /* Resources */,
+				64D2E1588CD149A1D725F57A /* [CP] Embed Pods Frameworks */,
+				66463E7608FF5B646A8CCAD4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17BFE8B82094ECCC00BEBBBB /* PBXTargetDependency */,
+			);
+			name = DeathNoteTests;
+			productName = DeathNoteTests;
+			productReference = 17BFE8B22094ECCC00BEBBBB /* DeathNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		17383125206E750700ABE6CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Quentin Richard";
 				TargetAttributes = {
 					1738312C206E750800ABE6CA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					17BFE8B12094ECCC00BEBBBB = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1738312C206E750800ABE6CA;
 					};
 				};
 			};
@@ -309,6 +391,7 @@
 			projectRoot = "";
 			targets = (
 				1738312C206E750800ABE6CA /* DeathNote */,
+				17BFE8B12094ECCC00BEBBBB /* DeathNoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +411,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BFE8B02094ECCC00BEBBBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -344,6 +434,43 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		64D2E1588CD149A1D725F57A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DeathNoteTests/Pods-DeathNoteTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS11.3/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.3/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.3/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeathNoteTests/Pods-DeathNoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66463E7608FF5B646A8CCAD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeathNoteTests/Pods-DeathNoteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6B5574014B2012BAC90FAE62 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +483,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DeathNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72807EE9C5E33D11D6EDA395 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeathNoteTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -384,10 +529,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS11.2/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.2/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.2/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -432,7 +577,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BFE8AE2094ECCC00BEBBBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BFE8B52094ECCC00BEBBBB /* ListOfDeathTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17BFE8B82094ECCC00BEBBBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1738312C206E750800ABE6CA /* DeathNote */;
+			targetProxy = 17BFE8B72094ECCC00BEBBBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1738313C206E750800ABE6CA /* LaunchScreen.storyboard */ = {
@@ -460,6 +621,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -467,6 +629,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -517,6 +680,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -524,6 +688,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -585,6 +750,48 @@
 			};
 			name = Release;
 		};
+		17BFE8B92094ECCC00BEBBBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2893572B981A9BA79467BC9 /* Pods-DeathNoteTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVDJ9WEBGB;
+				INFOPLIST_FILE = DeathNoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeathNote.app/DeathNote";
+			};
+			name = Debug;
+		};
+		17BFE8BA2094ECCC00BEBBBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8DE9D8881D18AA65966CE86 /* Pods-DeathNoteTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVDJ9WEBGB;
+				INFOPLIST_FILE = DeathNoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeathNote.app/DeathNote";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,6 +809,15 @@
 			buildConfigurations = (
 				17383143206E750800ABE6CA /* Debug */,
 				17383144206E750800ABE6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17BFE8BB2094ECCC00BEBBBB /* Build configuration list for PBXNativeTarget "DeathNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BFE8B92094ECCC00BEBBBB /* Debug */,
+				17BFE8BA2094ECCC00BEBBBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

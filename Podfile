@@ -15,3 +15,12 @@ target 'DeathNote' do
   pod 'SwiftLint'
 
 end
+
+target 'DeathNoteTests' do
+  use_frameworks!
+
+  #RxSwift
+  pod 'RxSwift', '~> 4.0'
+  pod 'RealmSwift'
+
+end

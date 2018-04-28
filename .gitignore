@@ -124,3 +124,5 @@ xcuserdata
 
 Podfile.lock
 Gemfile.lock
+
+DeathNote\.xcworkspace/xcshareddata/IDEWorkspaceChecks\.plist
