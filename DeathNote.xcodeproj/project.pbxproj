@@ -34,12 +34,20 @@
 		175E2CEE207FB10F00D3D472 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175E2CED207FB10F00D3D472 /* Localizable.strings */; };
 		1762748D207291F30070B73B /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762748C207291F30070B73B /* KeyboardExtension.swift */; };
 		17BFE8B52094ECCC00BEBBBB /* ListOfDeathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFE8B42094ECCC00BEBBBB /* ListOfDeathTest.swift */; };
+		17BFE8C52095197000BEBBBB /* DeathNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFE8C42095197000BEBBBB /* DeathNoteUITests.swift */; };
 		2CB6EC0E5F6B9859051B85FF /* Pods_DeathNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB80EEA91B951E0BDE7914 /* Pods_DeathNoteTests.framework */; };
 		B8DB1227D2A7DDEDA824EB13 /* Pods_DeathNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		17BFE8B72094ECCC00BEBBBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17383125206E750700ABE6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1738312C206E750800ABE6CA;
+			remoteInfo = DeathNote;
+		};
+		17BFE8C72095197000BEBBBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17383125206E750700ABE6CA /* Project object */;
 			proxyType = 1;
@@ -80,6 +88,9 @@
 		17BFE8B22094ECCC00BEBBBB /* DeathNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeathNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BFE8B42094ECCC00BEBBBB /* ListOfDeathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDeathTest.swift; sourceTree = "<group>"; };
 		17BFE8B62094ECCC00BEBBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17BFE8C22095197000BEBBBB /* DeathNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeathNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BFE8C42095197000BEBBBB /* DeathNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathNoteUITests.swift; sourceTree = "<group>"; };
+		17BFE8C62095197000BEBBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43FB80EEA91B951E0BDE7914 /* Pods_DeathNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D42B780713DCFC56DC21A4 /* Pods_DeathNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeathNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7FD5F31D2A9FFBB742091 /* Pods-DeathNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeathNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeathNote/Pods-DeathNote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BFE8BF2095197000BEBBBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,6 +131,7 @@
 			children = (
 				1738312F206E750800ABE6CA /* DeathNote */,
 				17BFE8B32094ECCC00BEBBBB /* DeathNoteTests */,
+				17BFE8C32095197000BEBBBB /* DeathNoteUITests */,
 				1738312E206E750800ABE6CA /* Products */,
 				754CD70EED854EAB1B867720 /* Pods */,
 				59CC3EE0E185E4B82971CBC1 /* Frameworks */,
@@ -124,6 +143,7 @@
 			children = (
 				1738312D206E750800ABE6CA /* DeathNote.app */,
 				17BFE8B22094ECCC00BEBBBB /* DeathNoteTests.xctest */,
+				17BFE8C22095197000BEBBBB /* DeathNoteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,6 +311,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		17BFE8C32095197000BEBBBB /* DeathNoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17BFE8C42095197000BEBBBB /* DeathNoteUITests.swift */,
+				17BFE8C62095197000BEBBBB /* Info.plist */,
+			);
+			path = DeathNoteUITests;
+			sourceTree = "<group>";
+		};
 		59CC3EE0E185E4B82971CBC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +385,24 @@
 			productReference = 17BFE8B22094ECCC00BEBBBB /* DeathNoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		17BFE8C12095197000BEBBBB /* DeathNoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17BFE8CB2095197000BEBBBB /* Build configuration list for PBXNativeTarget "DeathNoteUITests" */;
+			buildPhases = (
+				17BFE8BE2095197000BEBBBB /* Sources */,
+				17BFE8BF2095197000BEBBBB /* Frameworks */,
+				17BFE8C02095197000BEBBBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17BFE8C82095197000BEBBBB /* PBXTargetDependency */,
+			);
+			name = DeathNoteUITests;
+			productName = DeathNoteUITests;
+			productReference = 17BFE8C22095197000BEBBBB /* DeathNoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -371,6 +418,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					17BFE8B12094ECCC00BEBBBB = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1738312C206E750800ABE6CA;
+					};
+					17BFE8C12095197000BEBBBB = {
 						CreatedOnToolsVersion = 9.3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1738312C206E750800ABE6CA;
@@ -392,6 +444,7 @@
 			targets = (
 				1738312C206E750800ABE6CA /* DeathNote */,
 				17BFE8B12094ECCC00BEBBBB /* DeathNoteTests */,
+				17BFE8C12095197000BEBBBB /* DeathNoteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,6 +465,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		17BFE8B02094ECCC00BEBBBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17BFE8C02095197000BEBBBB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -585,6 +645,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BFE8BE2095197000BEBBBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BFE8C52095197000BEBBBB /* DeathNoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -592,6 +660,11 @@
 			isa = PBXTargetDependency;
 			target = 1738312C206E750800ABE6CA /* DeathNote */;
 			targetProxy = 17BFE8B72094ECCC00BEBBBB /* PBXContainerItemProxy */;
+		};
+		17BFE8C82095197000BEBBBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1738312C206E750800ABE6CA /* DeathNote */;
+			targetProxy = 17BFE8C72095197000BEBBBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -792,6 +865,40 @@
 			};
 			name = Release;
 		};
+		17BFE8C92095197000BEBBBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVDJ9WEBGB;
+				INFOPLIST_FILE = DeathNoteUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeathNote;
+			};
+			name = Debug;
+		};
+		17BFE8CA2095197000BEBBBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVDJ9WEBGB;
+				INFOPLIST_FILE = DeathNoteUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.DeathNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeathNote;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -818,6 +925,15 @@
 			buildConfigurations = (
 				17BFE8B92094ECCC00BEBBBB /* Debug */,
 				17BFE8BA2094ECCC00BEBBBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17BFE8CB2095197000BEBBBB /* Build configuration list for PBXNativeTarget "DeathNoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BFE8C92095197000BEBBBB /* Debug */,
+				17BFE8CA2095197000BEBBBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
